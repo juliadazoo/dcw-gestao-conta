@@ -1,0 +1,4 @@
+dcw_gestao:
+    resource: "@DcwGestaoBundle/Resources/config/routing.yml"
+    prefix:   /
+
