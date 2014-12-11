@@ -1,0 +1,28 @@
+Dcw\GestaoBundle\Entity\Address:
+# table config
+    type: entity
+    table: address
+    repositoryClass: Dcw\GestaoBundle\Repository\AddressRepository
+# pk
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+# other fields
+    fields:
+        address:
+            type: string
+            length: 255
+            nullable: false
+        number:
+            type: string
+            length: 10
+            nullable: true
+        city:
+            type: string
+            length: 255
+            nullable: false
+        state:
+            type: string
+            length: 2
+            nullable: false

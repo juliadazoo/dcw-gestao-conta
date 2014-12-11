@@ -1,0 +1,23 @@
+Dcw\GestaoBundle\Entity\Invoice:
+# table config
+    type: entity
+    table: invoice
+    repositoryClass: NAW\KodingBundle\Repository\InvoiceRepository
+# pk
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+# other fields
+    fields:
+        value:
+            type: decimal
+            precision: 10
+            scale: 2
+        date:
+            type: datetime
+# associations
+    manyToOne:
+        store:
+            targetEntity: Store
+            inversedBy: invoices

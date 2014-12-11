@@ -1,0 +1,25 @@
+Dcw\GestaoBundle\Entity\Store:
+# table config
+    type: entity
+    table: store
+    repositoryClass: Dcw\GestaoBundle\Repository\StoreRepository
+# pk
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+# other fields
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: false
+        cnpj:
+            type: string
+            length: 18
+            nullable: true
+# associations
+    oneToMany:
+        invoices:
+            targetEntity: Invoice
+            mappedBy: store

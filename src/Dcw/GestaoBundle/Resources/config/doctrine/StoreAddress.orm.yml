@@ -1,0 +1,19 @@
+Dcw\GestaoBundle\Entity\StoreAddress:
+# table config
+    type: entity
+    table: store_address
+    repositoryClass: Dcw\GestaoBundle\Repository\StoreAddressRepository
+# pk
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+# other fields
+    oneToOne:
+        # store relationship
+        store:
+            targetEntity: Store
+
+        #address relationship
+        address:
+            targetEntity: Address
