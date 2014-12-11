@@ -1,0 +1,30 @@
+store:
+    path:     /
+    defaults: { _controller: "DcwGestaoBundle:Store:index" }
+
+store_show:
+    path:     /{id}/show
+    defaults: { _controller: "DcwGestaoBundle:Store:show" }
+
+store_new:
+    path:     /new
+    defaults: { _controller: "DcwGestaoBundle:Store:new" }
+
+store_create:
+    path:     /create
+    defaults: { _controller: "DcwGestaoBundle:Store:create" }
+    requirements: { _method: post }
+
+store_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DcwGestaoBundle:Store:edit" }
+
+store_update:
+    path:     /{id}/update
+    defaults: { _controller: "DcwGestaoBundle:Store:update" }
+    requirements: { _method: post|put }
+
+store_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DcwGestaoBundle:Store:delete" }
+    requirements: { _method: post|delete }

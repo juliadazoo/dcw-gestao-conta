@@ -1,0 +1,30 @@
+address:
+    path:     /
+    defaults: { _controller: "DcwGestaoBundle:Address:index" }
+
+address_show:
+    path:     /{id}/show
+    defaults: { _controller: "DcwGestaoBundle:Address:show" }
+
+address_new:
+    path:     /new
+    defaults: { _controller: "DcwGestaoBundle:Address:new" }
+
+address_create:
+    path:     /create
+    defaults: { _controller: "DcwGestaoBundle:Address:create" }
+    requirements: { _method: post }
+
+address_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DcwGestaoBundle:Address:edit" }
+
+address_update:
+    path:     /{id}/update
+    defaults: { _controller: "DcwGestaoBundle:Address:update" }
+    requirements: { _method: post|put }
+
+address_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DcwGestaoBundle:Address:delete" }
+    requirements: { _method: post|delete }

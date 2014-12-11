@@ -1,0 +1,30 @@
+invoice:
+    path:     /
+    defaults: { _controller: "DcwGestaoBundle:Invoice:index" }
+
+invoice_show:
+    path:     /{id}/show
+    defaults: { _controller: "DcwGestaoBundle:Invoice:show" }
+
+invoice_new:
+    path:     /new
+    defaults: { _controller: "DcwGestaoBundle:Invoice:new" }
+
+invoice_create:
+    path:     /create
+    defaults: { _controller: "DcwGestaoBundle:Invoice:create" }
+    requirements: { _method: post }
+
+invoice_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DcwGestaoBundle:Invoice:edit" }
+
+invoice_update:
+    path:     /{id}/update
+    defaults: { _controller: "DcwGestaoBundle:Invoice:update" }
+    requirements: { _method: post|put }
+
+invoice_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DcwGestaoBundle:Invoice:delete" }
+    requirements: { _method: post|delete }
