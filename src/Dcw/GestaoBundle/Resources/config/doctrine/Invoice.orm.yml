@@ -2,7 +2,7 @@ Dcw\GestaoBundle\Entity\Invoice:
 # table config
     type: entity
     table: invoice
-    repositoryClass: NAW\KodingBundle\Repository\InvoiceRepository
+    repositoryClass: Dcw\GestaoBundle\Repository\InvoiceRepository
 # pk
     id:
         id:
