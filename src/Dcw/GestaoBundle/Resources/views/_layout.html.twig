@@ -5,19 +5,11 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/css/normalize.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/jquery-ui/jquery-ui.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/data-tables/css/jquery.dataTables.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/bootstrap/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/bootstrap/css/bootstrap-theme.min.css') }}" />
-    <script>
-    // Initialize angular app
-    var app = angular.module('app', ['ngRoute']).config(
-        function($interpolateProvider) {
-            $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-        }
-    );
-
-    </script>
 {% endblock %}
 {% block top_javascript %}
     <script src="{{ asset('bundles/dcwgestao/lib/angular/angular.min.js') }}"></script>
@@ -27,6 +19,15 @@
     <script src="{{ asset('bundles/dcwgestao/lib/data-tables/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('bundles/dcwgestao/lib/jquery-ui/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('bundles/dcwgestao/lib/bootstrap/js/bootstrap.js') }}"></script>
+    <script>
+    // Initialize angular app
+    var app = angular.module("app", ['ngRoute']).config(
+        function($interpolateProvider) {
+            $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+        }
+    );
+
+    </script>
 {% endblock %}
 </head>
 <body>
