@@ -1,3 +1,0 @@
-dcw_gestao_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: DcwGestaoBundle:Default:index }
