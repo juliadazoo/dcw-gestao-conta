@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('bundles/nawkoding/lib/jquery-ui/jquery-ui.min.css') }}" />
-            <link rel="stylesheet" href="{{ asset('bundles/nawkoding/lib/data-tables/css/jquery.dataTables.min.css') }}" />
-            <link rel="stylesheet" href="{{ asset('bundles/nawkoding/lib/bootstrap/css/bootstrap.min.css') }}" />
-            <link rel="stylesheet" href="{{ asset('bundles/nawkoding/lib/bootstrap/css/bootstrap-theme.min.css') }}" />
-        {% endblock %}
-        {% block header_javascript %}
-            <script type="text/javascript" src="{{ asset('bundles/nawkoding/js/jquery-2.1.1.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/nawkoding/lib/data-tables/js/jquery.dataTables.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/nawkoding/lib/jquery-ui/jquery-ui.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/nawkoding/lib/bootstrap/js/bootstrap.js') }}"></script>
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascript %}{% endblock %}
-    </body>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/jquery-ui/jquery-ui.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/data-tables/css/jquery.dataTables.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/dcwgestao/lib/bootstrap/css/bootstrap-theme.min.css') }}" />
+    <script>
+    // Initialize angular app
+    var app = angular.module('app', ['ngRoute']).config(
+        function($interpolateProvider) {
+            $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+        }
+    );
+
+    </script>
+{% endblock %}
+{% block top_javascript %}
+    <script src="{{ asset('bundles/dcwgestao/lib/angular/angular.min.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/angular/angular-route.min.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/js/jquery-2.1.1.min.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/data-tables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/bootstrap/js/bootstrap.js') }}"></script>
+{% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block bot_javascript %}
+    <script src="{{ asset('bundles/dcwgestao/lib/angular/filters.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/angular/factories.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/angular/controllers.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/lib/angular/routes.js') }}"></script>
+{% endblock %}
+</body>
 </html>
