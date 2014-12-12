@@ -17,6 +17,8 @@ class InvoiceType extends AbstractType
         $builder
             ->add('value')
             ->add('date')
+            ->add('time')
+            ->add('created_at')
             ->add('store')
         ;
     }
