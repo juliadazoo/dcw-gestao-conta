@@ -34,3 +34,26 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+bazinga_faker:
+    orm: doctrine
+    locale: pt_BR
+    entities:
+        Dcw\GestaoBundle\Entity\Address:
+            number: 5
+            custom_formatters:
+                address: { method: streetName }
+                complement: { method: secondaryAddress }
+                neighborhood: { method: name }
+                number: { method: buildingNumber }
+                city: { method: city }
+                state: { method: stateAbbr }
+        Dcw\GestaoBundle\Entity\Store:
+            number: 5
+            custom_formatters:
+                name: { method: company }
+                cnpj: { method: numerify, parameters: [ "##.###.###/####-##" ] }
+        Dcw\GestaoBundle\Entity\Tag:
+            number: 5
+            custom_formatters:
+                name: { method: randomElement, parameters: [ [ 'lazer', 'alimentação', 'vestuário', 'saúde' ] ] }
