@@ -10,10 +10,10 @@ Dcw\GestaoBundle\Entity\InvoiceTag:
             generator: { strategy: AUTO }
 # other fields
     oneToOne:
-        # store relationship
+        # invoice relationship
         invoice:
             targetEntity: Invoice
 
-        #address relationship
+        # tag relationship
         tag:
             targetEntity: Tag
