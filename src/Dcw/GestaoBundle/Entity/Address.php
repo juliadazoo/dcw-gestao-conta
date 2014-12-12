@@ -22,6 +22,16 @@ class Address
     /**
      * @var string
      */
+    private $complement;
+
+    /**
+     * @var string
+     */
+    private $neighborhood;
+
+    /**
+     * @var string
+     */
     private $number;
 
     /**
@@ -34,11 +44,10 @@ class Address
      */
     private $state;
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -61,11 +70,57 @@ class Address
     /**
      * Get address
      *
-     * @return string 
+     * @return string
      */
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * Set complement
+     *
+     * @param string $complement
+     * @return Address
+     */
+    public function setComplement($complement)
+    {
+        $this->complement = $complement;
+
+        return $this;
+    }
+
+    /**
+     * Get complement
+     *
+     * @return string
+     */
+    public function getComplement()
+    {
+        return $this->complement;
+    }
+
+    /**
+     * Set neighborhood
+     *
+     * @param string $neighborhood
+     * @return Address
+     */
+    public function setNeighborhood($neighborhood)
+    {
+        $this->neighborhood = $neighborhood;
+
+        return $this;
+    }
+
+    /**
+     * Get neighborhood
+     *
+     * @return string
+     */
+    public function getNeighborhood()
+    {
+        return $this->neighborhood;
     }
 
     /**
@@ -84,7 +139,7 @@ class Address
     /**
      * Get number
      *
-     * @return string 
+     * @return string
      */
     public function getNumber()
     {
@@ -107,7 +162,7 @@ class Address
     /**
      * Get city
      *
-     * @return string 
+     * @return string
      */
     public function getCity()
     {
@@ -130,7 +185,7 @@ class Address
     /**
      * Get state
      *
-     * @return string 
+     * @return string
      */
     public function getState()
     {
