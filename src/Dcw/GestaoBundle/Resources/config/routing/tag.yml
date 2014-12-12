@@ -1,0 +1,30 @@
+tag:
+    path:     /
+    defaults: { _controller: "DcwGestaoBundle:Tag:index" }
+
+tag_show:
+    path:     /{id}/show
+    defaults: { _controller: "DcwGestaoBundle:Tag:show" }
+
+tag_new:
+    path:     /new
+    defaults: { _controller: "DcwGestaoBundle:Tag:new" }
+
+tag_create:
+    path:     /create
+    defaults: { _controller: "DcwGestaoBundle:Tag:create" }
+    requirements: { _method: post }
+
+tag_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DcwGestaoBundle:Tag:edit" }
+
+tag_update:
+    path:     /{id}/update
+    defaults: { _controller: "DcwGestaoBundle:Tag:update" }
+    requirements: { _method: post|put }
+
+tag_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DcwGestaoBundle:Tag:delete" }
+    requirements: { _method: post|delete }

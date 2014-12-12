@@ -1,0 +1,30 @@
+invoicetag:
+    path:     /
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:index" }
+
+invoicetag_show:
+    path:     /{id}/show
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:show" }
+
+invoicetag_new:
+    path:     /new
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:new" }
+
+invoicetag_create:
+    path:     /create
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:create" }
+    requirements: { _method: post }
+
+invoicetag_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:edit" }
+
+invoicetag_update:
+    path:     /{id}/update
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:update" }
+    requirements: { _method: post|put }
+
+invoicetag_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DcwGestaoBundle:InvoiceTag:delete" }
+    requirements: { _method: post|delete }
