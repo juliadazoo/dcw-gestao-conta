@@ -119,19 +119,6 @@ class Invoice
     }
 
     /**
-     * Set created_at
-     *
-     * @param \DateTime $createdAt
-     * @return Invoice
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->created_at = $createdAt;
-
-        return $this;
-    }
-
-    /**
      * Get created_at
      *
      * @return \DateTime
@@ -163,11 +150,18 @@ class Invoice
     {
         return $this->store;
     }
+
     /**
      * @ORM\PrePersist
      */
     public function updateCreatedAt()
     {
-        // Add your code here
+        $date = empty($this->date) ? "01/01/1900" : $this->date;
+        $time = empty($this->time) ? "00:00" : $this->time;
+
+        $this->created_at = \DateTime::createFromFormat(
+            "d/m/Y H:i",
+            "$date $time"
+        );
     }
 }
