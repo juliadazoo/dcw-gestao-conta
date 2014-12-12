@@ -15,9 +15,21 @@ Dcw\GestaoBundle\Entity\Invoice:
             precision: 10
             scale: 2
         date:
+            type: string
+            length: 10
+            nullable: false
+        time:
+            type: string
+            length: 5
+            nullable: false
+        created_at:
             type: datetime
+            nullable: false
 # associations
     manyToOne:
         store:
             targetEntity: Store
             inversedBy: invoices
+# events
+    lifecycleCallbacks:
+        prePersist: [ updateCreatedAt ]
