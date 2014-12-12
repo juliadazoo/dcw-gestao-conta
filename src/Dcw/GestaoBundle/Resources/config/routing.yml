@@ -1,12 +1,19 @@
-dcw_gestao_invoice:
-    resource: "@DcwGestaoBundle/Resources/config/routing/invoice.yml"
-    prefix:   /invoice
+dcw_gestao_store:
+    resource: "@DcwGestaoBundle/Resources/config/routing/store.yml"
+    prefix:   /store
 
 dcw_gestao_address:
     resource: "@DcwGestaoBundle/Resources/config/routing/address.yml"
     prefix:   /address
 
-dcw_gestao_store:
-    resource: "@DcwGestaoBundle/Resources/config/routing/store.yml"
-    prefix:   /store
+dcw_gestao_invoice:
+    resource: "@DcwGestaoBundle/Resources/config/routing/invoice.yml"
+    prefix:   /invoice
 
+dcw_gestao_invoicetag:
+    resource: "@DcwGestaoBundle/Resources/config/routing/invoicetag.yml"
+    prefix:   /invoicetag
+
+dcw_gestao_tag:
+    resource: "@DcwGestaoBundle/Resources/config/routing/tag.yml"
+    prefix:   /tag
