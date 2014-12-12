@@ -18,11 +18,10 @@ class InvoiceType extends AbstractType
             ->add('value')
             ->add('date')
             ->add('time')
-            ->add('created_at')
             ->add('store')
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */
