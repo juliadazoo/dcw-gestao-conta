@@ -1,0 +1,16 @@
+Dcw\GestaoBundle\Entity\Tag:
+# table config
+    type: entity
+    table: tag
+    repositoryClass: Dcw\GestaoBundle\Repository\TagRepository
+# pk
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+# other fields
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: false
