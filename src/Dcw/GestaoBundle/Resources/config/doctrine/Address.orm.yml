@@ -17,11 +17,11 @@ Dcw\GestaoBundle\Entity\Address:
         complement:
             type: string
             length: 255
-            nullable: false
+            nullable: true
         number:
             type: string
             length: 10
-            nullable: true
+            nullable: false
         neighborhood:
             type: string
             length: 255
