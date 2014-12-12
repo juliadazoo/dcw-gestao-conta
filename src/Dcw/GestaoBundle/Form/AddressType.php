@@ -21,6 +21,7 @@ class AddressType extends AbstractType
             ->add('neighborhood')
             ->add('city')
             ->add('state')
+            ->add('zipcode')
         ;
     }
     
