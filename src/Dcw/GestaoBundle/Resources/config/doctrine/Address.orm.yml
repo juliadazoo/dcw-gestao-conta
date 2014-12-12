@@ -14,10 +14,18 @@ Dcw\GestaoBundle\Entity\Address:
             type: string
             length: 255
             nullable: false
+        complement:
+            type: string
+            length: 255
+            nullable: false
         number:
             type: string
             length: 10
             nullable: true
+        neighborhood:
+            type: string
+            length: 255
+            nullable: false
         city:
             type: string
             length: 255
