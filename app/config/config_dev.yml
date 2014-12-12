@@ -59,7 +59,7 @@ bazinga_faker:
             custom_formatters:
                 value: { method: randomFloat }
                 date: { method: date, parameters: [ "d/m/Y" ] }
-                time: { method: time }
+                time: { method: time, parameters: [ "H:i" ] }
         Dcw\GestaoBundle\Entity\Tag:
             number: 5
             custom_formatters:
