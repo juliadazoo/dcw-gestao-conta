@@ -1,0 +1,19 @@
+Dcw\GestaoBundle\Entity\InvoiceTagAddress:
+# table config
+    type: entity
+    table: invoice_tag
+    repositoryClass: Dcw\GestaoBundle\Repository\InvoiceTagRepository
+# pk
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+# other fields
+    oneToOne:
+        # store relationship
+        invoice:
+            targetEntity: Invoice
+
+        #address relationship
+        tag:
+            targetEntity: Tag
