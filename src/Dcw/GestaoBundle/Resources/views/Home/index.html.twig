@@ -1,0 +1,31 @@
+{% extends 'DcwGestaoBundle::_layout.html.twig' %}
+
+{% block body -%}
+    <ul>
+        <li>
+            <a href="{{ path('store') }}">
+                Store
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('address') }}">
+                Address
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('invoice') }}">
+                Invoice
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('tag') }}">
+                Tag
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('invoicetag') }}">
+                Invoice Tag
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
