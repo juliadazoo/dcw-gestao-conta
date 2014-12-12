@@ -20,20 +20,29 @@ class Invoice
     private $value;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     private $date;
+
+    /**
+     * @var string
+     */
+    private $time;
+
+    /**
+     * @var \DateTime
+     */
+    private $created_at;
 
     /**
      * @var \Dcw\GestaoBundle\Entity\Store
      */
     private $store;
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -56,7 +65,7 @@ class Invoice
     /**
      * Get value
      *
-     * @return string 
+     * @return string
      */
     public function getValue()
     {
@@ -66,7 +75,7 @@ class Invoice
     /**
      * Set date
      *
-     * @param \DateTime $date
+     * @param string $date
      * @return Invoice
      */
     public function setDate($date)
@@ -79,11 +88,57 @@ class Invoice
     /**
      * Get date
      *
-     * @return \DateTime 
+     * @return string
      */
     public function getDate()
     {
         return $this->date;
+    }
+
+    /**
+     * Set time
+     *
+     * @param string $time
+     * @return Invoice
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return string
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Set created_at
+     *
+     * @param \DateTime $createdAt
+     * @return Invoice
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->created_at = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get created_at
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
     }
 
     /**
@@ -102,10 +157,17 @@ class Invoice
     /**
      * Get store
      *
-     * @return \Dcw\GestaoBundle\Entity\Store 
+     * @return \Dcw\GestaoBundle\Entity\Store
      */
     public function getStore()
     {
         return $this->store;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function updateCreatedAt()
+    {
+        // Add your code here
     }
 }
