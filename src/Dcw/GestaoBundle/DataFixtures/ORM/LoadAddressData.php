@@ -14,17 +14,6 @@ class LoadAddressData
 {
     public function load(ObjectManager $manager)
     {
-        $address = new Address();
-
-        $address->setAddress("EQN 508/509");
-        $address->setComplement("Bl A");
-        $address->setNumber("Lt 1");
-        $address->setNeighborhood("Asa Norte");
-        $address->setCity("Brasília");
-        $address->setState("DF");
-
-        $manager->persist($address);
-        $manager->flush();
 
     }
 
