@@ -33,3 +33,4 @@ Dcw\GestaoBundle\Entity\Invoice:
 # events
     lifecycleCallbacks:
         prePersist: [ updateCreatedAt ]
+        preUpdate: [ updateCreatedAt ]
