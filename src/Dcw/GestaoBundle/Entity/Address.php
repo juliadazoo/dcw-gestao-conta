@@ -45,6 +45,11 @@ class Address
     private $state;
 
     /**
+     * @var string
+     */
+    private $zipcode;
+
+    /**
      * Get id
      *
      * @return integer
@@ -190,5 +195,28 @@ class Address
     public function getState()
     {
         return $this->state;
+    }
+
+    /**
+     * Set zipcode
+     *
+     * @param string $zipcode
+     * @return Address
+     */
+    public function setZipcode($zipcode)
+    {
+        $this->zipcode = $zipcode;
+
+        return $this;
+    }
+
+    /**
+     * Get zipcode
+     *
+     * @return string
+     */
+    public function getZipcode()
+    {
+        return $this->zipcode;
     }
 }
