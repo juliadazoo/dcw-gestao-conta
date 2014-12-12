@@ -25,7 +25,7 @@ Dcw\GestaoBundle\Entity\Address:
         neighborhood:
             type: string
             length: 255
-            nullable: false
+            nullable: true
         city:
             type: string
             length: 255
@@ -34,3 +34,7 @@ Dcw\GestaoBundle\Entity\Address:
             type: string
             length: 2
             nullable: false
+        zipcode:
+            type: string
+            length: 9
+            nullable: true
