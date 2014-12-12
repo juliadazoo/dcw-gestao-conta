@@ -1,4 +1,4 @@
-Dcw\GestaoBundle\Entity\InvoiceTagAddress:
+Dcw\GestaoBundle\Entity\InvoiceTag:
 # table config
     type: entity
     table: invoice_tag
