@@ -40,7 +40,7 @@ bazinga_faker:
     locale: pt_BR
     entities:
         Dcw\GestaoBundle\Entity\Address:
-            number: 5
+            number: 10
             custom_formatters:
                 address: { method: streetName }
                 complement: { method: secondaryAddress }
@@ -50,10 +50,16 @@ bazinga_faker:
                 state: { method: stateAbbr }
                 zipcode: { method: numerify, parameters: [ "##.###-###" ] }
         Dcw\GestaoBundle\Entity\Store:
-            number: 5
+            number: 10
             custom_formatters:
                 name: { method: company }
                 cnpj: { method: numerify, parameters: [ "##.###.###/####-##" ] }
+        Dcw\GestaoBundle\Entity\Invoice:
+            number: 10
+            custom_formatters:
+                value: { method: randomFloat }
+                date: { method: date, parameters: [ "d/m/Y" ] }
+                time: { method: time }
         Dcw\GestaoBundle\Entity\Tag:
             number: 5
             custom_formatters:
