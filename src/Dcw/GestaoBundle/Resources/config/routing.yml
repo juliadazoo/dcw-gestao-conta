@@ -1,3 +1,7 @@
+dcw_gestao_home:
+    path:     /
+    defaults: { _controller: "DcwGestaoBundle:Home:index" }
+
 dcw_gestao_store:
     resource: "@DcwGestaoBundle/Resources/config/routing/store.yml"
     prefix:   /store
