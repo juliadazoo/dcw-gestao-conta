@@ -48,6 +48,7 @@ bazinga_faker:
                 number: { method: buildingNumber }
                 city: { method: city }
                 state: { method: stateAbbr }
+                zipcode: { method: numerify, parameters: [ "##.###-###" ] }
         Dcw\GestaoBundle\Entity\Store:
             number: 5
             custom_formatters:
