@@ -38,9 +38,17 @@ class Store
     }
 
     /**
+     * Translate the object into a string
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+    /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -63,7 +71,7 @@ class Store
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -86,7 +94,7 @@ class Store
     /**
      * Get cnpj
      *
-     * @return string 
+     * @return string
      */
     public function getCnpj()
     {
@@ -119,7 +127,7 @@ class Store
     /**
      * Get invoices
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getInvoices()
     {
