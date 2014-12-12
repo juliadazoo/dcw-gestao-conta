@@ -21,6 +21,7 @@
     <script src="{{ asset('bundles/dcwgestao/lib/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('bundles/dcwgestao/js/sparkline.min.js') }}"></script>
     <script src="{{ asset('bundles/dcwgestao/lib/highcharts/highcharts.js') }}"></script>
+    <script src="{{ asset('bundles/dcwgestao/js/main.js') }}"></script>
     <script>
     // Initialize angular app
     var app = angular.module("app", ['ngRoute']).config(
@@ -33,7 +34,7 @@
 {% endblock %}
 </head>
 <body>
-{% block body %}{% endblock %}
+    <div class="content-fluid">{% block body %}{% endblock %}</div>
 {% block bot_javascript %}
     <script src="{{ asset('bundles/dcwgestao/lib/angular/filters.js') }}"></script>
     <script src="{{ asset('bundles/dcwgestao/lib/angular/factories.js') }}"></script>
