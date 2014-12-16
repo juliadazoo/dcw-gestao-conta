@@ -2,6 +2,8 @@
 <html ng-app="app">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}Welcome!{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 {% block stylesheets %}
@@ -34,7 +36,12 @@
 {% endblock %}
 </head>
 <body>
-    <div class="content-fluid">{% block body %}{% endblock %}</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-1"><a href="{{ path('dcw_gestao_home') }}">Home</a></div>
+        </div>
+        <div class="row">{% block body %}{% endblock %}</div>
+    </div>
 {% block bot_javascript %}
     <script src="{{ asset('bundles/dcwgestao/lib/angular/filters.js') }}"></script>
     <script src="{{ asset('bundles/dcwgestao/lib/angular/factories.js') }}"></script>
